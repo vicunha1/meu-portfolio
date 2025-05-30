@@ -1,0 +1,638 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  color: #091F5B;
+}
+
+/* Header: fonte, layout flex para espaçamento */
+header {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 120px;
+}
+
+/* Título no header com fonte especial */
+header h1 {
+  font-family: 'Abril Fatface', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+/* Lista horizontal no menu */
+header ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+/* Links do menu com estilo e efeito underline animado */
+header ul li a {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  color: #091F5B;
+  text-decoration: none;
+}
+
+header ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: #091F5B;
+  transition: width 0.4s ease, left 0.4s ease;
+  transform: translateX(-50%);
+}
+
+header ul li a:hover::after {
+  width: 100%;
+}
+
+/* Ajustes de scroll para âncoras específicas */
+
+#sobre {
+  scroll-margin-top: -2.5rem;
+}
+
+#projetos {
+  scroll-margin-top: 9rem;
+}
+/* Seção inicial com padding e overflow hidden para efeitos */
+.inicio {
+  position: relative;
+  padding: 4rem 0 10rem 16rem;
+  overflow: hidden;
+}
+
+/* Texto na seção inicial, posicionamento e fonte */
+.inicio > #texto-inicio {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  width: 49%;
+  min-height: 55px;
+  position: relative;
+  top: 5.8rem;
+  left: 16rem;
+}
+
+/* Cursor animado (ex: para efeito de digitação) */
+.cursor {
+  display: inline-block;
+  animation: piscar 0.7s infinite;
+}
+
+@keyframes piscar {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Títulos grandes na seção inicial */
+.inicio > #texto-1, #texto-2  {
+  font-family: 'Abril Fatface', sans-serif;
+  font-weight: 500;
+  font-size: 6rem;
+}
+
+/* Margens específicas para os títulos */
+#texto-1 {
+  margin-left: 3rem;
+}
+
+#texto-2 {
+  margin-left: 12rem;
+  margin-top: -3rem;
+}
+
+/* Contêiner para estrelas animadas em background */
+.estrelas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Estrela individual com animação de brilho */
+.estrela {
+  position: absolute;
+  color: #091F5B;
+  font-size: 15px;
+  opacity: 0;
+  animation: brilho 1.3s ease-out forwards;
+}
+
+@keyframes brilho {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* Seção "Sobre" com fundo azul escuro e texto branco */
+.fundo-sobre {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background-color: #091F5B;
+  color: white;      
+  width: 100%;
+  height: 120vh;
+  box-sizing: border-box;
+  display: flex;
+  margin-top: 4rem;
+}
+
+/* Título dentro da seção sobre com fonte especial e posição absoluta */
+.fundo-sobre > h1 {
+  font-family: 'Abril Fatface', sans-serif;
+  font-weight: 500;
+  color: #091F5B;
+  position: absolute;
+  top: 33rem;
+  left: 3rem;
+  font-size: 4rem;
+}
+
+/* Container de habilidades com margens e largura */
+.habilidades {
+  margin: 9rem 3rem 0 3rem;
+  width: 50%;
+}
+
+/* Título das habilidades */
+.habilidades h2 {
+  font-size: 35px;
+  margin-bottom: 2rem;
+}
+
+/* Cada habilidade com margem inferior */
+.habilidade {
+  margin-bottom: 1.5rem;
+}
+
+/* Nome da habilidade com largura fixa */
+.habilidade span {
+  font-size: 18px;
+  display: inline-block;
+  width: 120px;
+}
+
+/* Barra branca de fundo das barras de progresso */
+.barra {
+  background-color: white;
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: inline-block;
+  width: 55%;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+/* Barra azul que indica o progresso */
+.progresso {
+  background-color: #365dc7;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Porcentagem ao lado da barra */
+.porcentagem {
+  font-size: 16px;
+}
+
+/* Texto sobre mim com margens e alinhamento */
+.sobre-mim {
+  margin: 12rem 8rem 0 0;
+  width: 40%;
+  text-align: justify;
+  font-size: 18px;
+}
+
+/* Ícones sociais com estilo, alinhamento e transição */
+.sobre-mim .icons .fa-brands, .fa-solid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #091F5B;
+  border-radius: 30px;
+  padding: 1rem;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Efeito hover nos ícones sociais */
+.sobre-mim .icons .fa-brands:hover, .fa-solid:hover {
+  background-color: #091F5B;
+  color: white;
+  border: solid 1px white;
+  transform: scale(1.1);
+}
+
+/* Container dos ícones com espaçamento */
+.sobre-mim .icons {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 0 0 0;
+}
+
+/* Container da seção projetos com margem */
+.projetos {
+  margin: 0 0 10rem 15rem;
+}
+
+/* Container de projetos com posição absoluta para texto */
+.meus-projetos {
+  position: absolute;
+  left: 48rem;
+  top: 85rem;
+  text-align: justify;
+}
+
+/* Título dos meus projetos com fonte especial */
+.meus-projetos h1 {
+  font-family: 'Abril Fatface', sans-serif;
+  font-weight: 500;
+  font-size: 4rem;
+  width: 100%;
+}
+
+/* Parágrafo na seção projetos */
+.meus-projetos p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  width: 87%;
+}
+
+/* Container dos cards de projetos com flex e gap */
+.projetos-sessao {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0 0 0 -5rem;
+}
+
+/* Estilo do card principal do projeto */
+.projeto-card {
+  margin: -5rem 0 0 -8rem;
+  width: 17rem;
+  height: 30rem;
+  background: linear-gradient(to top, #091F5B, #04174b);
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Efeito hover de zoom nos cards */
+.projeto-card:hover, .projeto-card-2:hover, .projeto-card-3:hover {
+  transform: scale(1.05);
+}
+
+/* Logo dentro do card do projeto */
+.logo-projeto {
+  width: 10rem;
+  height: 10rem;
+  margin-top: 8.5rem;
+}
+
+/* Card menor 2 */
+.projeto-card-2 {
+  margin: -30rem 0 0 10rem;
+  width: 22rem;
+  height: 14rem;
+  background: linear-gradient(to top, #091F5B, #04174b);
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Logo do segundo card */
+.logo-projeto-2 {
+  width: 8rem;
+  height: 8rem;
+  margin-top: 2rem;
+}
+
+/* Card menor 3 */
+.projeto-card-3 {
+  margin: -14rem 0 0 10rem;
+  width: 22rem;
+  height: 14rem;
+  background: linear-gradient(to top, #091F5B, #04174b);
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Logo do terceiro card */
+.logo-projeto-3 {
+  width: 10rem;
+  height: 8rem;
+  margin-top: 2rem;
+}
+
+/* Modal detalhes do projeto (inicialmente escondido) */
+.detalhes-caixa, .video-caixa {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.85);
+}
+
+.video-caixa {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Conteúdo dentro do modal */
+.detalhes-conteudo, .video-conteudo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background-color: #212844;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 20px;
+  width: 60%;
+  color: white;
+  text-align: center;
+}
+
+/* Botão de fechar modal */
+.fechar {
+  color: white;
+  font-size: 30px;
+  float: right;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fechar:hover {
+  color: #365dc7;
+}
+
+/* Botão para ver mais detalhes */
+.botao-ver,
+.projetos-sessao button {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #fff;
+  color: #212844;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.botao-ver:hover {
+  background-color: #365dc7;
+  color: white;
+}
+
+.projetos-sessao button {
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.video-conteudo video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Footer fixo com gradiente e texto centralizado */
+footer {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background: linear-gradient(to left, #091F5B, #04174b);
+  color: white;
+  height: 3rem; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 12px;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, #04174b, #365dc7);
+  border-radius: 10px;
+}
+
+
+
+/*fazer max width para maior que 1024px - 1366px*/
+
+/* Responsividade para tablets e celulares *//* Responsividade para tablets e celulares */
+@media (max-width: 1024px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 1rem;
+  }
+
+  header ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 1rem 0;
+  }
+
+  header ul li a {
+    font-size: 16px;
+  }
+
+  #projetos {
+    scroll-margin-top: 3rem;
+  }
+
+  .inicio {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .inicio #texto-inicio {
+    position: relative;
+    width: 95%;
+    left: -0.1rem;
+    top: 8rem;
+    margin: 0 auto;
+  }
+
+  .inicio #texto-1 {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    margin: -5rem 0 0 0;
+  }
+
+  .inicio #texto-2 {
+    margin: 0.2rem 0 10rem 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .fundo-sobre {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+  }
+
+  .fundo-sobre > h1 {
+    position: static;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .habilidades,
+  .sobre-mim {
+    width: 100%;
+    margin: 0;
+  }
+
+  .habilidades {
+    margin-bottom: 3rem;
+  }
+
+  .porcentagem {
+    position: relative;
+    left: 19rem;
+  }
+
+  .projetos {
+    margin: 2rem 0;
+  }
+
+  .meus-projetos {
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0 2rem 1.5rem;
+  }
+
+  .meus-projetos h1 {
+    font-size: 3rem;
+    margin: 0 0 0 -1.5rem;
+  }
+
+  .projetos {
+    gap: 5rem;
+  }
+
+  .projetos-sessao {
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+    margin: 0;
+  }
+
+  .projeto-card,
+  .projeto-card-2,
+  .projeto-card-3 {
+    margin: 10px;
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .logo-projeto,
+  .logo-projeto-2,
+  .logo-projeto-3 {
+    margin: 1rem auto;
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .detalhes-conteudo, .video-conteudo  {
+  width: 85%;
+}
+
+  footer {
+    text-align: center;
+    height: auto;
+    padding: 1rem;
+  }
+}
+
+/* Responsividade para celulares pequenos */
+@media (max-width: 480px) {
+  .inicio > #texto-1,
+  .inicio > #texto-2 {
+    font-size: 2.5rem;
+  }
+
+  .meus-projetos h1 {
+    font-size: 2.5rem;
+  }
+
+  .habilidades h2 {
+    font-size: 28px;
+  }
+
+  .sobre-mim {
+    font-size: 16px;
+  }
+}
+
+
