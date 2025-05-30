@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--fontes-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--icons-->
+    <script src="https://kit.fontawesome.com/054cc15602.js" crossorigin="anonymous"></script>
+    <title>Meu Portfólio</title>
+</head>
+<body id="inicio">
+    <!--cabeçalho-->
+    <header>
+        <h1>VICTÓRIA CUNHA</h1>
+        <nav>
+            <ul>
+                <!-- Menu de navegação com links que levam para seções da página -->
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#projetos">Meus Projetos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Inicio-->
+    <section class="inicio">
+        <p id="texto-inicio">
+            Unindo design, programação e criatividade para desenvolver projetos que saem do conceito e ganham vida.
+            <span class="cursor">|</span>
+            <!-- Cursor piscando para efeito visual -->
+        </p>
+
+        <h1 id="texto-1">MEU</h1>
+        <h1 id="texto-2">PORTFÓLIO</h1>
+
+        <div class="estrelas"></div>
+        <!-- Efeito visual de estrelas com CSS e JS -->
+    </section>
+
+    <!--Sobre Mim-->
+    <section class="fundo-sobre" id="sobre">
+        <h1>SOBRE MIM</h1>
+
+        <!--Habilidades-->
+        <div class="habilidades">
+            <h2>Minhas Habilidades</h2>
+
+            <!-- Cada "habilidade" mostra uma barra de progresso e porcentagem -->
+            <div class="habilidade">
+                <span>HTML</span>
+                <div class="barra"><div class="progresso" style="width: 85%;"></div></div>
+                <span class="porcentagem">85%</span>
+            </div>
+            <div class="habilidade">
+                <span>CSS</span>
+                <div class="barra"><div class="progresso" style="width: 80%;"></div></div>
+                <span class="porcentagem">80%</span>
+            </div>
+            <div class="habilidade">
+                <span>JavaScript</span>
+                <div class="barra"><div class="progresso" style="width: 45%;"></div></div>
+                <span class="porcentagem">45%</span>
+            </div>
+            <div class="habilidade">
+                <span>Figma</span>
+                <div class="barra"><div class="progresso" style="width: 85%;"></div></div>
+                <span class="porcentagem">85%</span>
+            </div>
+            <div class="habilidade">
+                <span>After Effects</span>
+                <div class="barra"><div class="progresso" style="width: 85%;"></div></div>
+                <span class="porcentagem">85%</span>
+            </div>
+            <div class="habilidade">
+                <span>Engenharia de Prompt</span>
+                <div class="barra"><div class="progresso" style="width: 65%;"></div></div>
+                <span class="porcentagem">65%</span>
+            </div>
+        </div>
+
+        <div class="sobre-mim">
+            <h1>SOBRE MIM</h1>
+            <p>Oi! Meu nome é Ana Victoria Cunha, muito prazer. Sou apaixonada por criar e colocar em prática todo o conhecimento e criatividade que tenho no meu dia a dia. Tenho um grande interesse em criar protótipos e desenvolver a parte visual de sites, buscando sempre unir funcionalidade e estética.</p>
+            <div class="icons">
+
+                <!-- Links para redes sociais -->
+                <a href="https://wa.me/5585997778186"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/hyvic._/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/vicunha1"><i class="fa-brands fa-github"></i></a>
+                <a href="https://mail.google.com/mail/u/0/?pli=1#inbox?compose=CllgCKBzzwjwTRwkHqZKMGWzfTjSdZzmGCRZSpMGSMsXHXMfRHnBcMrwHbQtTBNVcpTLckfWsnq"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!--Meus Projetos-->
+    <section class="projetos" id="projetos">
+
+         <!-- Cards de projetos -->
+        <div class="projetos-sessao">
+            <div class="projeto-card" onclick="abrirDetalhes('card-1')">
+                <img src="img/logo-correcting.png" class="logo-projeto">
+            </div>
+
+            <!-- Caixa de detalhes do projeto, aparece quando clicado -->
+            <div id="card-1" class="detalhes-caixa">
+                <div class="detalhes-conteudo">
+                    <span class="fechar" onclick="fecharDetalhes('card-1')">&times;</span>
+                    <!-- botão de fechar -->
+
+                    <h2>Correcting</h2>
+                    <p><strong>Data:</strong> 2024</p>
+                    <p>Correcting é um projeto criado em 2024 com o objetivo de corrigir redações de forma rápida e acessível, além de oferecer dicas e orientações para melhorar a escrita. Desenvolvido em equipe, participei da criação do design do site do zero junto com uma colega e fui responsável por programar toda a estrutura, exceto pela caixa de correção, que ficou a cargo de outra integrante. Utilizei HTML, CSS, JavaScript (para transições) e PHP para o banco de dados, além de aplicar conceitos de engenharia de prompt. Como recurso extra, integrei um chatbot usando a API do Google Gemini para ajudar os usuários na correção de textos e fornecer sugestões personalizadas.</p>
+                    <p><strong>Linguagens:</strong> HTML, CSS e JS.</p>
+                    <button class="    " onclick="abrirVideo('video1')">Ver Projeto</button>
+                    <div id="video1" class="video-caixa">
+                        <div class="video-conteudo">
+                            <span class="fechar" onclick="fecharVideo('video1')">&times;</span>
+                            <!-- Aqui você coloca seu iframe ou vídeo -->
+                            <video controls>
+                            <source src="img/vídeo-correcting.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeo.
+                            </video>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="projetos-sessao">
+            <div class="projeto-card-2" onclick="abrirDetalhes('card-2')">
+                <img src="img/logo-estante-viva.png" class="logo-projeto-2">
+            </div>
+
+            <div id="card-2" class="detalhes-caixa">
+                <div class="detalhes-conteudo">
+                    <span class="fechar" onclick="fecharDetalhes('card-2')">&times;</span>
+                    <h2>Estante Viva</h2>
+                    <p><strong>Data:</strong> 2025</p>
+                    <p>No projeto social do curso de informática, fiquei responsável pela parte inicial do site, onde desenvolvi o cabeçalho e implementei um carrossel de imagens utilizando HTML, CSS e JavaScript.</p>
+                    <p><strong>Linguagens:</strong> HTML, CSS e JS.</p>
+                    <a href="https://interfacealuno.netlify.app/" class="botao-ver">Ver Projeto</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="projetos-sessao">
+            <div class="projeto-card-3" onclick="abrirDetalhes('card-3')">
+                <img src="img/logo-time-history's.png" class="logo-projeto-3">
+            </div>
+
+            <div id="card-3" class="detalhes-caixa">
+                <div class="detalhes-conteudo">
+                    <span class="fechar" onclick="fecharDetalhes('card-3')">&times;</span>
+                    <h2>Time History's</h2>
+                    <p><strong>Data:</strong> 2024</p>
+                    <p>Site desenvolvido como projeto técnico, com o objetivo de integrar tecnologia e educação. Escolhi a disciplina de História e criei uma plataforma onde os usuários podem acessar facilmente vídeos sobre os conteúdos históricos mais buscados e estudados, além de receber recomendações de canais populares na área. O site foi desenvolvido focando em uma interface simples, funcional e acessível para estudantes.</p>
+                    <p><strong>Linguagens:</strong> HTML e CSS.</p>
+                    <a href="https://timehistorys.netlify.app/" class="botao-ver">Ver Projeto</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="meus-projetos">
+            <h1>MEUS PROJETOS</h1>
+            <p>Oi! Esses são alguns dos meus projetos onde mostro minhas criações e aprendizados. Aqui você vai encontrar desde ideias de design de interfaces, desenvolvimento front-end, até algumas experiências com engenharia de prompt e interações. Cada projeto reflete uma parte do meu processo criativo e a vontade de transformar ideias em algo visualmente bonito e funcional.</p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        Copyright © 2025 Victória Cunha. Todos os direitos reservados.
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
